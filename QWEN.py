@@ -100,21 +100,3 @@ def image_segestion(image):
         ],
     )
     return completion.choices[0].message.content
-
-
-# while True:
-#     print('1.image edit')
-#     print('2.is ai generate?')
-#     print('3.image segestion')
-#     print('4.exit')
-#     choice = input()
-#     if choice == '1':
-#         image_edit(get_image())
-#     elif choice == '2':
-#         aigeneration(get_image())
-#     elif choice == '3':
-#         print(image_segestion(get_image()))
-#     elif choice == '4':
-#         break
-#     else:
-#         print('invalid choice')
