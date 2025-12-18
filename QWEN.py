@@ -35,8 +35,7 @@ def image_edit(image):
         os.system('cls')
         # To view the full response, uncomment the following line.
         # print(json.dumps(response, ensure_ascii=False))
-        for i, content in enumerate(response.output.choices[0].message.content):
-            print(f"{content['image']}")
+        return response.output.choices[0].message.content[0]['image']
     else:
         print(f"HTTP status code: {response.status_code}")
         print(f"Error code: {response.code}")
@@ -72,7 +71,7 @@ def aigeneration(image):
             }
         ],
     )
-    print(completion.choices[0].message.content)
+    return completion.choices[0].message.content
 def image_segestion(image):
     #animation()
     client = OpenAI(
@@ -101,9 +100,7 @@ def image_segestion(image):
         ],
     )
     return completion.choices[0].message.content
-def get_image():
-  path = input('path')
-  return encode_file(path)
+
 
 # while True:
 #     print('1.image edit')
