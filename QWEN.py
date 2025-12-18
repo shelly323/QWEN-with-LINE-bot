@@ -7,7 +7,7 @@ from encode import encode_file
 
 dashscope.base_http_api_url = 'https://dashscope-intl.aliyuncs.com/api/v1'
 
-api_key = 'sk-3cc213f25b2d4ebb9c0bb9e6a878f8e0'
+api_key = os.getenv('QWENAPI', None)
 
 def image_edit(image):
     #animation()
