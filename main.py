@@ -55,7 +55,6 @@ def handle_text_message(event):
     if text in ['一鍵修圖', '修圖建議', 'AI圖片辨識']:
         user_status[user_id] = text
         
-        # 修正：這裡傳入 configuration
         with ApiClient(configuration) as api_client:
             line_bot_api = MessagingApi(api_client)
             line_bot_api.reply_message(
